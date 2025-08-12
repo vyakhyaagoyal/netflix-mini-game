@@ -3,14 +3,14 @@ export const metadata = {
   description: "A Farcaster frame for Netflix fun!",
   openGraph: {
     title: "FlixMatch",
-    images: ["https://FlixMatch.vercel.app/image.png"],
+    images: ["https://netflix-mini-game.vercel.app/image.png"],
   },
   other: {
     "fc:frame": "vNext",
-    "fc:frame:image": "https://FlixMatch.vercel.app/image.png",
+    "fc:frame:image": "https://netflix-mini-game.vercel.app/image.png",
     "fc:frame:button:1": "Play Now",
     "fc:frame:button:1:action": "link",
-    "fc:frame:button:1:target": "https://FlixMatch.vercel.app/",
+    "fc:frame:button:1:target": "https://netflix-mini-game.vercel.app/",
   },
 };
 
