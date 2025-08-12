@@ -7,12 +7,12 @@
   "frame": {
     "version": "1",
     "name": "Example Frame",
-    "iconUrl": "https://netflix-mini-game.vercel.app/icon.png",
-    "homeUrl": "https://netflix-mini-game.vercel.app",
-    "imageUrl": "https://netflix-mini-game.vercel.app/image.png",
+    "iconUrl": "https://FlixMatch.vercel.app/icon.png",
+    "homeUrl": "https://FlixMatch.vercel.app",
+    "imageUrl": "https://FlixMatch.vercel.app/image.png",
     "buttonTitle": "Check this out",
-    "splashImageUrl": "https://netflix-mini-game.vercel.app/splash.png",
+    "splashImageUrl": "https://FlixMatch.vercel.app/splash.png",
     "splashBackgroundColor": "#eeccff",
-    "webhookUrl": "https://netflix-mini-game.vercel.app/api/webhook"
+    "webhookUrl": "https://FlixMatch.vercel.app/api/webhook"
   }
 }
