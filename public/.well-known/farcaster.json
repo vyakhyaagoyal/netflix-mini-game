@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjExNTAzMDgsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhCRDg2OEY1OUYyNDlEZjRBZGNhM2QyNjM4NWVhNDY4NDE3ZDZFQjM4In0",
+    "payload": "eyJkb21haW4iOiJuZXRmbGl4LW1pbmktZ2FtZS52ZXJjZWwuYXBwIn0",
+    "signature": "MHgyNDAwZDhjODc4OGI0ZDlmYzE1M2M2NTcxMjAyZDk2OTFkOGE3MjAxZGYxMzRkY2MzY2IzMWIzYTFjNDQ5ZWEwMmNjNDZhZTNhMTkzZTc5YzMxMGExYmU5M2Q5Mzk0MDMyZGU4YjhkMzg3ZDdjYmEzOWUyY2I2ZjhmMDM2MGNhNDFi"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Example Frame",
+    "iconUrl": "https://netflix-mini-game.vercel.app/icon.png",
+    "homeUrl": "https://netflix-mini-game.vercel.app",
+    "imageUrl": "https://netflix-mini-game.vercel.app/image.png",
+    "buttonTitle": "Check this out",
+    "splashImageUrl": "https://netflix-mini-game.vercel.app/splash.png",
+    "splashBackgroundColor": "#eeccff",
+    "webhookUrl": "https://netflix-mini-game.vercel.app/api/webhook"
+  }
+}
