@@ -1,0 +1,185 @@
+/**
+ * DESIGN SYSTEM - DO NOT EDIT UNLESS NECESSARY
+ * 
+ * This file contains the centralized design system for the mini app.
+ * These component classes establish the visual consistency across all components.
+ * 
+ * ⚠️  AI SHOULD NOT NORMALLY EDIT THIS FILE ⚠️
+ * 
+ * Instead of modifying these classes, AI should:
+ * 1. Use existing component classes (e.g., .btn, .card, .input)
+ * 2. Use Tailwind utilities for one-off styling
+ * 3. Create new React components rather than new CSS classes
+ * 4. Only edit this file for specific bug fixes or accessibility improvements
+ * 
+ * When AI needs to style something:
+ * ✅ Good: <button className="btn btn-primary">Click me</button>
+ * ✅ Good: <div className="bg-primary text-white px-4 py-2 rounded">Custom</div>
+ * ❌ Bad: Adding new CSS classes here for component-specific styling
+ * 
+ * This design system is intentionally minimal to prevent bloat and maintain consistency.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Theme colors */
+  --primary-hex: #e50914; /* Netflix Red */
+  --primary: 229 9 20; /* RGB for use in rgb()/hsl() */
+  --primary-light: 244 63 94; /* slightly lighter */
+  --primary-dark: 178 6 16; /* slightly darker */
+
+  /* Background / text colors */
+  --background-hex: #ffffff;
+  --foreground-hex: #171717;
+  --background: 255 255 255;
+  --foreground: 23 23 23;
+  --muted-foreground: 210 10% 60%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-hex: #0a0a0a;
+    --foreground-hex: #ededed;
+    --background: 10 10 10;
+    --foreground: 237 237 237;
+  }
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+
+
+@layer components {
+  /* Global container styles for consistent layout */
+  .container {
+    @apply mx-auto max-w-md px-4;
+  }
+  
+  .container-wide {
+    @apply mx-auto max-w-lg px-4;
+  }
+  
+  .container-narrow {
+    @apply mx-auto max-w-sm px-4;
+  }
+
+  /* Global card styles */
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm;
+  }
+  
+  .card-primary {
+    @apply bg-primary/10 border-primary/20;
+  }
+
+  /* Global button styles */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-gray-900 hover:bg-gray-200 focus:ring-gray-500 dark:bg-secondary-dark dark:text-gray-100 dark:hover:bg-gray-600;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 bg-transparent hover:bg-gray-50 focus:ring-gray-500 dark:border-gray-600 dark:hover:bg-gray-800;
+  }
+
+  /* Global input styles */
+  .input {
+    @apply block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400;
+  }
+
+  /* Global loading spinner */
+  .spinner {
+    @apply animate-spin rounded-full border-2 border-gray-300 border-t-primary;
+  }
+  
+  .spinner-primary {
+    @apply animate-spin rounded-full border-2 border-white border-t-transparent;
+  }
+
+  /* Global focus styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-foreground\/90 {
+    /* fallback for browsers that don't support rgb(var(--var) / alpha) */
+    color: var(--foreground-hex, #171717);
+    /* modern syntax with alpha channel */
+    color: rgb(var(--foreground) / 0.9);
+  }
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
